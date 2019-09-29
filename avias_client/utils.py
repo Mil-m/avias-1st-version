@@ -35,7 +35,6 @@ def parse_xml():
 
     try:
         for f_path in xml_files:
-            print(f_path)
             with open(f_path, 'r') as f:
                 data = f.read()
             js_obj = json.loads(json.dumps(xmltodict.parse(data)))
@@ -47,6 +46,7 @@ def parse_xml():
             d_obj['RequestTime'] = flights_dict['@RequestTime']
             d_obj['ResponseTime'] = flights_dict['@ResponseTime']
             d_obj['RequestId'] = flights_dict['RequestId']
+            d_obj['XmlFilePath'] = key
 
             flights_el = flights_dict['PricedItineraries']['Flights']
 
