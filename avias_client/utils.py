@@ -82,9 +82,14 @@ def parse_xml():
 
     flights_df = flights_df.fillna('')
     for col in ['RequestTime', 'ResponseTime', 'DepartureTimeStamp', 'ArrivalTimeStamp']:
-        flights_df[col + '_ts'] = flights_df[col].apply(
-            lambda x: pd.to_datetime(dateutil.parser.parse(x)).value / 1000000000 if x else None
-        )
+        flights_df[col + '_ts'] = flights_df[col].apply(lambda x: dateutil.parser.parse(x) if x else None)
+
+    flights_df['TimeDelta'] = list(
+        map(lambda x: flights_df.loc[x, 'ArrivalTimeStamp_ts'] - flights_df.loc[x, 'DepartureTimeStamp_ts'], flights_df.index)
+    )
+
+    for col in ['RequestTime', 'ResponseTime', 'DepartureTimeStamp', 'ArrivalTimeStamp']:
+        flights_df[col + '_ts'] = flights_df[col].apply(lambda x: pd.to_datetime(x).value / 1000000000 if x else None)
 
     flights_df.to_csv(Path(path_to_local_tmp, 'flights_df.tsv'), sep='\t', index=False)
 
@@ -120,7 +125,7 @@ def get_best_flights(departure, destination):
     flights_df_s_d_price.to_csv(Path(path_to_local_tmp, 'flights_price_df.tsv'), sep='\t', index=False)
 
     show_col = ['FlightNumber', 'Source', 'Destination', 'DepartureTimeStamp', 'ArrivalTimeStamp', 'Class',
-                'NumberOfStops', 'TicketType', 'PricingCost', 'PricingType', 'PricingChargeType']
+                'NumberOfStops', 'TicketType', 'PricingCost', 'PricingType', 'PricingChargeType', 'TimeDelta']
 
     flights_df_s_d_price_t_am = flights_df_s_d_price[flights_df_s_d_price['PricingChargeType'] == 'TotalAmount']
     min_PricingCost = flights_df_s_d_price_t_am['PricingCost'].min()
@@ -137,7 +142,6 @@ def get_best_flights(departure, destination):
     )
     flights_df_s_d_price_t_am = flights_df_s_d_price[flights_df_s_d_price['PricingChargeType'] == 'TotalAmount']
 
-    show_col += ['TimeDiff']
     min_Time = flights_df_s_d_price_t_am['TimeDiff'].min()
     max_Time = flights_df_s_d_price_t_am['TimeDiff'].max()
 
