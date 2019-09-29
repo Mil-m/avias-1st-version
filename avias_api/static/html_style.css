@@ -1,0 +1,24 @@
+table {
+    border: 4px single #c7c7c7;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+    background: #e0e0e0;
+    background: #ccc;
+    padding: 5px;
+    border: 1px solid #c7c7c7;
+}
+td {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #c7c7c7;
+}
+tr:nth-child(even) {background: #fafafa}
+tr:nth-child(odd) {background: #ffffff}
+
+tr:nth-child(even):hover {
+    background: #e0e0e0;
+}
+tr:nth-child(odd):hover {
+    background: #e0e0e0;
+}

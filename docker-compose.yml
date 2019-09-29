@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+
+  avias_api:
+    restart: always
+    env_file:
+      - ./.env
+    build:
+      context: .
+      dockerfile: ./avias_api/Dockerfile
+    ports:
+      - "2100:2100"
+    networks:
+      - backend
+    volumes:
+      - ./local_data/logs:${LOG_FOLDER}:rw
+      - ./local_data/tmp:${TMP_FOLDER}:rw
+      - ./local_data/data:${DATA_FOLDER}:rw
+    command: gunicorn -w 4 -b 0.0.0.0:2100 avias_api.api:app --log-level debug
+
+networks:
+  backend:
+    driver: bridge

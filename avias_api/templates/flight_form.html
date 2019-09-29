@@ -1,0 +1,27 @@
+<html>
+
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='form_style.css') }}">
+
+    </head>
+
+    <body>
+        {% import 'bootstrap/wtf.html' as wtf %}
+        <h2>Choose option.</h2>
+        {% block app_content %}
+            <h1>Flights options</h1>
+            <form method="POST" action={{url_for('flight_variations')}}>
+                Departure: {{ form.departure }}
+                Destination: {{ form.destination }}
+                <input type="submit" value="Get flights variations">
+            </form>
+            <form method="POST" action={{url_for('flight_time_price')}}>
+                Departure: {{ form.departure }}
+                Destination: {{ form.destination }}
+                <input type="submit" value="Get the best flights">
+            </form>
+        {% endblock %}
+    </body>
+
+</html>

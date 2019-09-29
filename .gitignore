@@ -1,0 +1,13 @@
+# IDEA files
+.idea/*
+
+# .pyc files
+__pycache__/*
+*.pyc
+
+# Strange file formats
+*.csv
+
+# Other tmp files
+local_data
+*.egg-info
