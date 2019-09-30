@@ -157,7 +157,7 @@ def get_best_flights(departure, destination):
         best_idxs += [idxs_arr[i] for i in range(round(len(idxs_arr) / 2) - 1, round(len(idxs_arr) / 2) + 1)]
         df_best = flights_df_s_d_price_t_am.loc[best_idxs][show_col]
     else:
-        df_best = flights_df_s_d_price_t_am[show_col]
+        df_best = flights_df_s_d_price_t_am.sort_values(['PricingCost', 'TimeDiff'], ascending=[True, True])[show_col]
     df_best.set_index('FlightNumber', inplace=True)
 
     return {'min_PricingCost': df_min_PricingCost, 'max_PricingCost': df_max_PricingCost,
