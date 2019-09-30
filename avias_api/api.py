@@ -19,6 +19,7 @@ class CustomAPI(Api):
 
         :rtype: str
         """
+
         return url_for(self.endpoint('specs'), _external=False)
 
 
@@ -68,6 +69,7 @@ class FlightOptions(Resource):
 
         :return: flask.Response object
         """
+
         form = FlightForm(request.form, meta={'csrf': False})
         str_html = render_template('flight_form.html', form=form)
         return Response(str_html, mimetype='text/html')
@@ -88,7 +90,10 @@ class FlightVariations(Resource):
     def post(self):
         """
         Getting flight variants from one point to another
+
+        :return: flask.Response object
         """
+
         form = FlightForm(request.form, meta={'csrf': False})
         departure = request.form['departure']
         destination = request.form['destination']
@@ -123,7 +128,10 @@ class FlightTimePrice(Resource):
     def post(self):
         """
         Getting the most expensive/cheapest, fast/long, and best flights
+
+        :return: flask.Response object
         """
+
         form = FlightForm(request.form, meta={'csrf': False})
         departure = request.form['departure']
         destination = request.form['destination']
@@ -158,6 +166,7 @@ class RouteDifferences(Resource):
         """
         Get the route differences
         """
+        
         form = FlightForm(request.form, meta={'csrf': False})
         departure = request.form['departure']
         destination = request.form['destination']

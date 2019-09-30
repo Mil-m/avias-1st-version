@@ -8,6 +8,11 @@ import copy
 import dateutil
 
 def parse_xml():
+    """
+    Parsing *.xml files and creating pd.dataframe table by these files
+
+    :return: dict, dictionary with Source and Destination unique fields for Flask flights user form
+    """
 
     def get_flight_dict_obj(onw_ret_flight, d_obj_onw_ret):
         onw_st = onw_ret_flight['Carrier']['@id'] + '/' + onw_ret_flight['Carrier']['#text']
@@ -97,6 +102,15 @@ def parse_xml():
             'Destination': set(flights_df['Destination'].unique()) - {''}}
 
 def get_best_flights(departure, destination):
+    """
+    Getting best flights for departure and destination values
+
+    :param departure: str, departure point
+    :param destination: str, destination point
+
+    :return: dict, dictionary structure for best flights
+    """
+
     path_to_local_tmp = os.environ['TMP_FOLDER']
     flights_df = pd.read_csv(Path(path_to_local_tmp, 'flights_df.tsv'), sep='\t').fillna('')
     flights_df_s_d = flights_df[(flights_df['Source'] == departure) & (flights_df['Destination'] == destination)]
