@@ -10,16 +10,9 @@ from avias_api.forms import FlightForm
 from avias_client.utils import get_best_flights
 
 
-# some monkey fix of swagger-ui nginx proxy errors
 class CustomAPI(Api):
     @property
     def specs_url(self):
-        """
-        The Swagger specifications absolute url (ie. `swagger.json`)
-
-        :rtype: str
-        """
-
         return url_for(self.endpoint('specs'), _external=False)
 
 
