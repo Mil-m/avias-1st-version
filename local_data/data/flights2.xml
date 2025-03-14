@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirFareSearchResponse RequestTime="2019-08-01T12:00:00" ResponseTime="2019-08-01T12:05:00">
+  <RequestId>67890</RequestId>
+  <PricedItineraries>
+    <Flights>
+      <Flight>
+        <Carrier id="XYZ">BruneiAir</Carrier>
+        <FlightNumber>EF789</FlightNumber>
+        <Source>BWN</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2025-04-02T10:00:00</DepartureTimeStamp>
+        <ArrivalTimeStamp>2025-04-02T14:00:00</ArrivalTimeStamp>
+        <Class>Economy</Class>
+        <NumberOfStops>0</NumberOfStops>
+        <FareBasis>FB-AAA</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>Refundable</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="StandardFare" ChargeType="TotalAmount">600.00</ServiceCharges>
+          <ServiceCharges type="Tax" ChargeType="fare">0.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="XYZ">BruneiAir</Carrier>
+        <FlightNumber>GH012</FlightNumber>
+        <Source>BWN</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2025-04-02T11:00:00</DepartureTimeStamp>
+        <ArrivalTimeStamp>2025-04-02T15:30:00</ArrivalTimeStamp>
+        <Class>Business</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-BBB</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>Refundable</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="PremiumFare" ChargeType="TotalAmount">1400.00</ServiceCharges>
+          <ServiceCharges type="Tax" ChargeType="fare">0.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="XYZ">BruneiAir</Carrier>
+        <FlightNumber>GH013</FlightNumber>
+        <Source>BWN</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2025-04-03T11:00:00</DepartureTimeStamp>
+        <ArrivalTimeStamp>2025-04-03T15:30:00</ArrivalTimeStamp>
+        <Class>Economy</Class>
+        <NumberOfStops>0</NumberOfStops>
+        <FareBasis>FB-CCC</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>NonRefundable</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="StandardFare" ChargeType="TotalAmount">650.00</ServiceCharges>
+          <ServiceCharges type="Tax" ChargeType="fare">0.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="XYZ">BruneiAir</Carrier>
+        <FlightNumber>GH014</FlightNumber>
+        <Source>BWN</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2025-04-03T12:00:00</DepartureTimeStamp>
+        <ArrivalTimeStamp>2025-04-03T17:00:00</ArrivalTimeStamp>
+        <Class>Business</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-DDD</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>Refundable</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="PremiumFare" ChargeType="TotalAmount">1350.00</ServiceCharges>
+          <ServiceCharges type="Tax" ChargeType="fare">100.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+    </Flights>
+  </PricedItineraries>
+</AirFareSearchResponse>

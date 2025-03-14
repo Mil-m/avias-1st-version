@@ -1,8 +1,13 @@
-Flask
+Flask==1.1.2
 flask_restplus
 gunicorn
 flask_wtf
 flask_bootstrap
-pathlib
-xmltodict
+pathlib==1.0.1
+xmltodict==0.14.2
 pandas
+jinja2==2.11.3
+werkzeug==0.16.1
+markupsafe
+nbconvert
+contextvars

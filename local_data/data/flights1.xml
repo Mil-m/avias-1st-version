@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirFareSearchResponse RequestTime="2019-07-01T10:00:00" ResponseTime="2019-07-01T10:05:00">
+  <RequestId>12345</RequestId>
+  <PricedItineraries>
+    <Flights>
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A0</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-21T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-22T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1002.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A0.1</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-22T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-23T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1002.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A0.2</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-23T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-24T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1002.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A0.3</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-24T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-25T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1002.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A0.4</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-25T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-26T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1002.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A2</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-22T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-23T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1100.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A2.1</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-23T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-24T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1100.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A2.2</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-24T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-25T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1100.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A2.3</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-25T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-26T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1100.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+
+      <Flight>
+        <Carrier id="ABC">AirSomething</Carrier>
+        <FlightNumber>37A2.4</FlightNumber>
+        <Source>DXB</Source>
+        <Destination>BKK</Destination>
+        <DepartureTimeStamp>2019-07-26T22:10</DepartureTimeStamp>
+        <ArrivalTimeStamp>2019-07-27T07:10</ArrivalTimeStamp>
+        <Class>E</Class>
+        <NumberOfStops>1</NumberOfStops>
+        <FareBasis>FB-XYZ</FareBasis>
+        <WarningText></WarningText>
+        <TicketType>S</TicketType>
+        <Pricing currency="USD">
+          <ServiceCharges type="SingleAdultBaseFare" ChargeType="TotalAmount">1100.00</ServiceCharges>
+        </Pricing>
+      </Flight>
+    </Flights>
+  </PricedItineraries>
+</AirFareSearchResponse>

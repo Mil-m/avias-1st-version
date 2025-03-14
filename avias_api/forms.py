@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import TextField, TextAreaField, FloatField, SubmitField, SelectField
-from wtforms.validators import Required, Optional
+from wtforms import StringField, TextAreaField, FloatField, SubmitField, SelectField
+from wtforms.validators import DataRequired, Optional
 
 from avias_client.utils import parse_xml
 
@@ -12,11 +12,11 @@ def prepare_select_field_data(st):
 
 class FlightForm(FlaskForm):
     departure = SelectField('Departure point',
-                            validators=[Required()],
+                            validators=[DataRequired()],
                             choices=prepare_select_field_data(flights_dict['Source']),
                             render_kw = {'rows': 1, 'cols': 5})
     destination = SelectField('Destination point',
-                              validators=[Required()],
+                              validators=[DataRequired()],
                               choices=prepare_select_field_data(flights_dict['Destination']),
                               render_kw={'rows': 1, 'cols': 5})
     submit1 = SubmitField('Get flights variations from one point to another')
