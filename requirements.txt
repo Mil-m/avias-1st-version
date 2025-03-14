@@ -7,7 +7,7 @@ pathlib==1.0.1
 xmltodict==0.14.2
 pandas
 jinja2==2.11.3
-werkzeug==0.16.1
+werkzeug==3.0.6
 markupsafe
 nbconvert
 contextvars
